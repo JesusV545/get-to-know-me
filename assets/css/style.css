@@ -1,0 +1,268 @@
+/*Roots*/
+:root {
+    --blueish: darkcyan;
+    --smokywhite: whitesmoke;
+    --fontcolor: darkcyan;
+
+}
+
+
+/*Universal*/
+* {
+    margin: 3%;
+
+}
+body {
+    background-image: url(https://images.alphacoders.com/203/203543.jpg);
+}
+
+header {
+    background-color: rgb(30, 31, 32);
+    border: 2px solid var(--smokywhite);
+    border-radius: 7px;
+}
+
+a {
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 65px;
+    text-align: center;
+    color: var(--fontcolor);
+    padding-top: 3%;
+    padding-bottom: 0%;
+}
+
+h2 {
+    
+font-size: 28px;
+    
+text-align: center;
+}
+
+nav {
+    padding: 0%;
+}
+
+nav ul {
+    color: var(--fontcolor);
+    font-size: 30px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-flex;
+    justify-content: center;
+    margin: 1%;
+    padding: 1%;
+}
+
+nav ul li::after {
+    content: "\1F427"
+    
+}
+
+/*Classes*/
+
+.banner-blink {
+    animation: blinker 1s linear infinite;
+}
+
+.ptitle ul {
+    font-size: 35px;
+    color: var(--fontcolor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+}
+
+.ptitle p {
+    font-size: 25px;
+    color: var(--fontcolor);
+    line-height: 1.1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--smokywhite);
+    border-radius: 7px;
+    padding: 4%;
+    background-color: rgb(30, 31, 32);
+    margin: 3%;
+}
+
+.ptitle p:focus {
+    outline: none;
+    border-color: var(--smokywhite);
+    box-shadow: 0 0 10px var(--smokywhite);
+}
+
+.pictures {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+}
+
+    
+
+.pictures img {
+    width: 200px;  
+    height: auto;   
+    display: flex;
+    padding: 4%;
+    height:60%;
+    border-radius:30%;
+    
+}
+
+.pictures img:hover {
+    transform: scale(1.2);
+}
+
+
+.fancy-header {
+    font-size: 40px;
+    color: var(--fontcolor);
+    display: flex;margin-left: 4%;
+    margin-right: 4%;flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-me {
+    font-size: 30px;
+    color: var(--fontcolor);
+}
+
+.contact-me ul {
+    display: flex;
+    border: 2px solid var(--smokywhite);
+    border-radius: 7px;
+    padding: 4%;
+    background-color: rgb(30, 31, 32);
+    justify-content: space-around;
+}
+
+/*IDs*/
+
+/*Keyframe*/
+
+  
+@keyframes blinker {
+    50% {
+    opacity: 0;
+}
+}
+
+/*Media Queries*/
+
+@media screen and (min-width: 480px) {
+
+    .pictures {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .ptitle p {
+        font-size: 20px;
+    }
+
+    .contact-me ul {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .ptitle ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 720px) {
+
+    .pictures {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .pictures img {
+        width: 40%;     
+        flex: 30%;
+        padding: 2%;
+        height:60%;
+        border-radius:30%;
+        flex-wrap:wrap;
+        
+    }
+
+    .ptitle p {
+        font-size: 25px;
+    }
+
+    .contact-me ul {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .ptitle ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1080px){
+    
+    .pictures {
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2%;
+        flex-wrap: nowrap;
+    }
+
+    .ptitle p {
+        font-size: 25px;
+        color: var(--fontcolor);
+        line-height: 1.1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border: 2px solid var(--smokywhite);
+        border-radius: 7px;
+        padding: 4%;
+        background-color: rgb(30, 31, 32);
+        margin: 3%;
+    }
+
+    .pictures img {
+        width: 200px;
+        height: auto;
+        display: flex;
+        padding: 4%;
+        height:60%;
+        border-radius:30%;
+    }
+
+    .ptitle ul {
+        font-size: 35px;
+        color: var(--fontcolor);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;    
+    }
+
+    .contact-me ul {
+        display: flex;
+        border: 2px solid var(--smokywhite);
+        border-radius: 7px;
+        padding: 4%;
+        background-color: rgb(30, 31, 32);
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
